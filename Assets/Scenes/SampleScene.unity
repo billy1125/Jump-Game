@@ -629,6 +629,7 @@ GameObject:
   - component: {fileID: 807902891}
   - component: {fileID: 807902892}
   - component: {fileID: 807902893}
+  - component: {fileID: 807902894}
   m_Layer: 0
   m_Name: cat
   m_TagString: Untagged
@@ -776,6 +777,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a90d5b9ebb1fa964cbe3142fbd1ef31c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpForce: 350
+  walkForce: 10
+  maxWalkSpeed: 1
+--- !u!95 &807902894
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807902887}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b9d98748e62f2f4bbad331e170d4940, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1704037700
 GameObject:
   m_ObjectHideFlags: 0

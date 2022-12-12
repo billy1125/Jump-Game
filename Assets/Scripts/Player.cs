@@ -5,14 +5,17 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     Rigidbody2D rigid2d;
-    float jumpForce = 300.0f;
-    float walkForce = 10.0f;
-    float maxWalkSpeed = 2.0f;
+    Animator animator;
+
+    public float jumpForce = 400.0f;
+    public float walkForce = 10.0f;
+    public float maxWalkSpeed = 2.0f;
 
     // Start is called before the first frame update
     void Start()
     {
         rigid2d = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -20,6 +23,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            animator.SetTrigger("JumpTrigger");
             rigid2d.AddForce(transform.up * jumpForce);
             //rigid2d.AddForce(new Vector3(0, 1, 0) * jumpForce);
         }
@@ -32,5 +36,13 @@ public class Player : MonoBehaviour
 
         if (speedx < maxWalkSpeed)
             rigid2d.AddForce(transform.right * key * walkForce);
+
+        if (key != 0)
+            transform.localScale = new Vector3(key, 1, 1);
+
+        if (rigid2d.velocity.y == 0)
+            animator.speed = speedx / 2;
+        else
+            animator.speed = 1;
     }
 }
