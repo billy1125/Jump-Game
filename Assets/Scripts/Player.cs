@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     Rigidbody2D rigid2d;
     Animator animator;
+    public GameObject gameManager; //置放GameManager物件的公開變數
 
     public float jumpForce = 400.0f;
     public float walkForce = 10.0f;
@@ -49,6 +50,11 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //SceneManager.LoadScene("ClearScene");
+        if (collision.tag == "Arrow")
+        {
+            gameManager.GetComponent<GameManager>().DecreaseHp(); // 扣血
+        }
+        else if (collision.tag == "Flag")
+            SceneManager.LoadScene("ClearScene");
     }
 }
