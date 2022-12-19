@@ -23,7 +23,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) &&
+            rigid2d.velocity.y == 0)
         {
             animator.SetTrigger("JumpTrigger");
             rigid2d.AddForce(transform.up * jumpForce);
