@@ -47,6 +47,10 @@ public class Player : MonoBehaviour
             animator.speed = speedx / 2;
         else
             animator.speed = 1;
+
+        if (transform.position.y <= -10)
+            // 遊戲重新開始
+            SceneManager.LoadScene("GameScene");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
