@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 1004269802}
   - component: {fileID: 1004269801}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: GameOver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -314,7 +314,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1004269800}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45d30e52d41cb034da13c0153e72aad2, type: 3}
+  m_Script: {fileID: 11500000, guid: d475b75b57aae3f4c9abd45394f805d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1004269802
